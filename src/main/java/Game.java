@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Game {
     ArrayList<Player> players = new ArrayList<>();

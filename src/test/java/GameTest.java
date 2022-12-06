@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashMap;
+
 public class GameTest {
 
     @Test
@@ -81,5 +83,18 @@ public class GameTest {
 
         Assertions.assertThrows(NotRegisteredException.class,
                 () -> game.round("Vitia", "Petiy"));
+    }
+
+    @Test
+    public void playerFound() {
+        HashMap<String, Player> map = new HashMap<>();
+        Player player1 = new Player(1, "Dima", 500);
+        Player player2 = new Player(2, "Vova", 500);
+
+        map.put("kay1", player1);
+        map.put("kay2", player2);
+
+        map.get("kay1");
+        map.get("kay2");
     }
 }
